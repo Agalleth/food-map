@@ -39,14 +39,14 @@
         <div class="row">
           <div class="input-field col s8 m8">
             <i class="material-icons prefix white-text">search</i>
-            <input id="icon_search" type="text" class="validate">
-            <label for="icon_prefix">Filtrar restaurantes</label>
+            <input id="icon_search" placeholder="Filtrar restaurantes" type="text" class="validate white-text">
           </div>
         </div>
       </form>
     </div>
   </div>
   <div class="container">
+
     <div id="main_food_container" class="row">
   <!--    <div class="col m4 s6">
         <img src="../assets/images/mex.jpg" data-target="modal1"  class="modal-trigger"  alt="">
@@ -69,25 +69,21 @@
   <!-- Modal Structure -->
  <div id="modal1" class="modal modal-fixed-footer">
    <div class="modal-content">
-     <h4 class="center-align">Tacos</h4>
+     <h4 id="restaurant-name" class="center-align restaurant-name">Villa María</h4>
      <div class="row">
        <div class="col m10 s10 offset-m1 offset-s1">
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.467085337495!2d-99.19480618719662!3d19.435418486882693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d20200d84a1915%3A0x9b4d8cd1016858fb!2sVilla+Mar%C3%ADa!5e0!3m2!1ses-419!2smx!4v1517542847694" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
        </div>
      </div>
      <div class="row center-align">
-       <h5 class="orange-text">Tacos para todos</h5>
+       <h5 id="speciality-food" class="orange-text speciality-food">Comida típica mexicana</h5>
      </div>
      <div class="row">
-       <div id="direccion" class="col s6 m6">
+       <div id="adress-restaurant" class="center-align"> <!-- id="direccion" -->
          <p>Calle siempre viva</p>
        </div>
-       <div class="col s6 m6">
-         <p>Rango de precios</p>
-         <div class="row">Servicio a domicilio</div>
-       </div>
-     </div>
 
+     </div>
    </div>
    <div class="modal-footer">
      <button href="#" class="modal-action modal-close btn waves-effect waves-light orange" type="submit" name="action">Aceptar</button>
