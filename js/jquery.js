@@ -1,16 +1,17 @@
 //input de materialize //Function expression function global las variables son las que puedes usar en cualquier lugar del código
 var $input = $("#icon_search")
-
-
+// Función de modal
 $(document).ready(function(){
    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
    $('.modal').modal();
  });
 
+
 function cargarPagina(){
 //  $('.modal').modal();
   paintRestaurants(data);
 //  $input.keyup(restaurantFilter);
+  $input.keyup(modalFilter);
 }
 
 function paintRestaurants(array){ //instanceando imágenes
@@ -34,19 +35,6 @@ function paintRestaurants(array){ //instanceando imágenes
   //Reemplazando los atributos
 }
 
-function filtImg(){
-  var $name = $(this).data("name");
-  var $food = $ (this).data("food");
-  var $adress = $(this).data("adress");
-
-  function infoModal($name, $food, $adress){
-
-    $(".restaurant-name").text($name);
-    $(".speciality-food").text($food);
-    $(".adress-restaurant").text($adress);
-  }
-}
-
 function imprimirData (objeto){
   var newObjetc=objeto.firstChild;
   var dataName=newObjetc.getAttribute("data-name");
@@ -62,16 +50,19 @@ function imprimirData (objeto){
   console.log(dataImage); */
 }
 
-
-
-
-
-
-
-
-
-
-
+function modalFilter(){
+  var textInput = $input.val().trim();
+  if (textInput.length>0){
+    var lower = textInput.toLowerCase();
+    var filterRestautants= data.filter(function(data){
+      return data.food.toLowerCase().indexOf(textInput)>= 0;
+    });
+    paintRestaurants(filterRestautants);
+  }else{
+    $("#main_food_container").empty();
+      paintRestaurants(data);
+  }
+}
 
 
 

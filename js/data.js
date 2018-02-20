@@ -1,7 +1,7 @@
 var data = [
   {
     "name": "Villa María",
-    "food": "mexicana",
+    "food": "Restaurante mexicano",
     "adress": "Avenida Homero 704, Polanco, Polanco IV Secc, 11550 Ciudad de México, CDMX",
     "photo": "../assets/images/mex.jpg"
   },
