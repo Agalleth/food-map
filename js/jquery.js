@@ -64,10 +64,4 @@ function modalFilter(){
   }
 }
 
-
-
-
-
-
-
 $(document).ready(cargarPagina);
